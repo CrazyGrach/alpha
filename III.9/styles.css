@@ -150,7 +150,7 @@
     .teamsline {margin-top: -7%;}
 }
 
-@media screen and (min-height:701px) and (max-height:1000px){
+@media screen and (min-height:701px) and (max-height:1000px) and (max-width:1000px){
     .teamleft { display: none;}
     .teamright { display: none;}
     .scoreleft {margin-top: 20px;}
@@ -161,10 +161,10 @@
     .text {margin-left: 120px;}
 }
 
-@media screen and (min-height: 1001px) and (min-width: 1000px) and (max-width:2000px) {
+@media screen and (min-height: 700px) and (min-width: 700px) and (max-width:2000px) {
     .sidebartexts {margin-left: 10px;margin-top: 25px;height: 40px;margin-bottom: 25px;}
     .scoreleft {font-size: 400%; height:80px; margin-left: 12%;}
-    .scoreright {font-size: 400%; height:80px; margin-left: 20%;}
+    .scoreright {font-size: 400%; height:80px; margin-left: 21%;}
     .teamsline {margin-top: 4%;}
 
 }
