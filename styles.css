@@ -61,7 +61,6 @@ a:hover {
 }
 
 .line {
-
     border-top: 2px solid #000000;
 }
 
@@ -72,6 +71,13 @@ a:hover {
 
 .gamehead {
     text-align: center;
+}
+
+.tempbutton {
+    width:200px;
+    height:100px;
+    font-size: 200%;
+    margin-left: 20%;
 }
 
 @media screen and (max-height: 700px) {
