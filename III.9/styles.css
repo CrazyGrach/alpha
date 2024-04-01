@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+a { text-decoration: none; 
+    color: black
+}
+
 @font-face {
     font-family: 'main';
     font-weight: 400;
