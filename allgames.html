@@ -7,6 +7,62 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sep 1, 2023 00:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var countdownfunction = setInterval(function() {
+        
+            // Get todays date and time
+
+            var now = new Date().getTime();
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = "До открытия сайта: " + days + ":" + hours + ":" + minutes + ":" + seconds;
+            
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("demo").innerHTML = "Скоро.";
+            }
+        }, 1000);
+
+        var countDownDate2 = new Date("Apr 2, 2024 23:00:00").getTime();
+
+        var countdownfunction2 = setInterval(function() {
+        
+        // Get todays date and time
+
+        var now2 = new Date().getTime();
+        // Find the distance between now an the count down date
+        var distance2 = countDownDate2 - now2;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+        var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo2").innerHTML = days2 + ":" + hours2 + ":" + minutes2 + ":" + seconds2;
+        
+        // If the count down is over, write some text 
+        if (distance2 < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("demo2").innerHTML = "Скоро.";
+        }
+    }, 1000);
+        </script>
+
     <a href='./index.html'><div class="sidebarblock"><center><font size=12>Negr</font></center></div></a>
     <div class="sidebar" id="test1">
         <div class="sidebartexts">
@@ -26,12 +82,12 @@
         </div>
         <div class="line"></div>
         <div class="sidebartexts">
-            <a href='./III.9/index.html'>ВСЕ ИГРЫ</a>
+            <font color=white>ВСЕ ИГРЫ</font>
         </div>
         <div class="line"></div>
-        <div class="sidebartexts">
+        <a href="./stats.html"><div class="sidebartexts">
             СТАТИСТИКА
-        </div>
+        </div></a>
         <div class="line"></div>
         <div class="sidebartexts">
             КОМАНДЫ
@@ -46,6 +102,9 @@
         </div></div>
         <div class="text">
     <a href="./III.9/19.03.2024.html"><div class="tempbutton">19 марта</div></a>
-    <a href="./III.9/26.03.2024.html"><div class="tempbutton">26 марта</div></a></div>
+    <a href="./III.9/26.03.2024.html"><div class="tempbutton">26 марта</div></a>
+    <a href="./III.9/02.04.2024.html"><div class="tempbutton">02 апреля<br><p id=demo2></p></div></a>
+    <div class="tempbutton">09 апреля<br>КАНИКУЛЫ</div>
+</div>
 </body>
 </html>
