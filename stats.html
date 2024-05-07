@@ -10,33 +10,7 @@
 
 
 
-    <script>
-    var countDownDate2 = new Date("May 7, 2024 23:00:00").getTime();
-
-    var countdownfunction2 = setInterval(function() {
-    
-    // Get todays date and time
-
-    var now2 = new Date().getTime();
-    // Find the distance between now an the count down date
-    var distance2 = countDownDate2 - now2;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
-    var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("demo2").innerHTML = days2 + ":" + hours2 + ":" + minutes2 + ":" + seconds2;
-    
-    // If the count down is over, write some text 
-    if (distance2 < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("demo2").innerHTML = "Скоро.";
-    }
-}, 1000);
-    </script>
+    <script src="./index.js"></script>
     <a href='./index.html'><div class="sidebarblock"><center><font size=12>Negr</font></center></div></a>
     <div class="sidebar" id="test1">
         <div class="sidebartexts">
@@ -86,8 +60,9 @@
                 <td>02 АПРЕЛЯ</td>  
                 <td>16 АПРЕЛЯ</td>
                 <td>23 АПРЕЛЯ</td>
-                <td>07 МАЯ<br><p id=demo2></p></td>
-                <td>14 МАЯ</td>
+                <td style="color:rgb(0, 0, 0);
+                background: rgb(255, 255, 255)" >07 МАЯ<br><p style="font-size: 17pt; color:red">Физры не было</p></td>
+                <td>14 МАЯ<br><p id=demo2></p></td>
                 <td>Итого</td>
             </tr>
             <tr>
@@ -98,7 +73,13 @@
                 <td>11</td>
                 <td style="color:red">Н</td>
                 <td>14</td>
-                <td></td>
+                <td rowspan="15" style="color:red;
+                background: repeating-linear-gradient(
+                    45deg,
+                    white 20px 40px,
+        
+                    rgb(255, 0, 0) 40px 60px
+                  );" ></td>
                 <td></td>
                 <td>40</td>
             </tr>
@@ -111,7 +92,6 @@
                 <td>6</td>
                 <td>10</td>
                 <td></td>
-                <td></td>
                 <td>26</td>
             </tr>
             <tr>
@@ -123,18 +103,17 @@
                 <td style="color:red">Н</td>
                 <td style="color:red">Н</td>
                 <td></td>
-                <td></td>
                 <td>3</td>
             </tr>
             <tr>
-                <td style="background: linear-gradient(70deg, #804a00, #895e1a, #9c7a3c, #b08d57);text-align: left;">№3</td>
+                <td style="background: linear-gradient(70deg, #804a00, #895e1a, #9c7a3c, #b08d57);text-align: left; color:rgb(255, 255, 255)">№3</td>
                 <td style="text-align: left;">Артём Ж.</td>
                 <td>10</td>
                 <td>5</td>
                 <td style="color:red">Н</td>
                 <td>7</td>
                 <td>6</td>
-                <td></td>
+ 
                 <td></td>
                 <td>28</td>
             </tr>
@@ -147,7 +126,6 @@
                 <td style="color:red">Н</td>
                 <td style="color:red">Н</td>
                 <td></td>
-                <td></td>
                 <td>5</td>
             </tr>
             <tr>
@@ -158,7 +136,6 @@
                 <td>11</td>
                 <td>2</td>
                 <td>5</td>
-                <td></td>
                 <td></td>
                 <td>25</td>
             </tr>
@@ -171,7 +148,6 @@
                 <td>2</td>
                 <td>2</td>
                 <td></td>
-                <td></td>
                 <td>15</td>
             </tr>
             <tr>
@@ -182,7 +158,6 @@
                 <td style="color:rgb(0, 110, 255)">Судья</td>
                 <td>2</td>
                 <td>7</td>
-                <td></td>
                 <td></td>
                 <td>16</td>
             </tr>
@@ -195,7 +170,6 @@
                 <td>1</td>
                 <td>7</td>
                 <td></td>
-                <td></td>
                 <td>18</td>
             </tr>
             <tr>
@@ -206,7 +180,6 @@
                 <td>17</td>
                 <td>9</td>
                 <td>18</td>
-                <td></td>
                 <td></td>
                 <td>52</td>
             </tr>
@@ -219,7 +192,6 @@
                 <td>5</td>
                 <td>5</td>
                 <td></td>
-                <td></td>
                 <td>21</td>
             </tr>
             <tr>
@@ -230,7 +202,6 @@
                 <td style="color:red">Н</td>
                 <td style="color:red">Н</td>
                 <td style="color:red">Н</td>
-                <td></td>
                 <td></td>
                 <td>5</td>
             </tr>
@@ -243,7 +214,6 @@
                 <td style="color:red">Н</td>
                 <td style="color:red">Н</td>
                 <td></td>
-                <td></td>
                 <td>2</td>
             </tr>
             <tr>
@@ -255,7 +225,6 @@
                 <td style="color:red">Н</td>
                 <td style="color:red">Н</td>
                 <td></td>
-                <td></td>
                 <td>2</td>
             </tr>
             <tr>
@@ -266,7 +235,6 @@
                 <td style="color:red">Н</td>
                 <td>1</td>
                 <td>4</td>
-                <td></td>
                 <td></td>
                 <td>9</td>
             </tr>
