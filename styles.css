@@ -7,13 +7,18 @@ a { text-decoration: none;
     color: black
 }
 
+body {
+    overflow: hidden
+}
 
 table.iksweb{
 	border-collapse:collapse;
 	border-spacing:0;
 	height: auto;
     font-size: xx-large;
-    margin-left: 17%;
+    table-layout: fixed;
+    width: 90%;
+    margin-left: 5%;
 }
 table.iksweb,table.iksweb td, table.iksweb th {
 	border: 1px solid #595959;
@@ -21,7 +26,7 @@ table.iksweb,table.iksweb td, table.iksweb th {
 }
 table.iksweb td,table.iksweb th {
 	padding: 3px;
-	width: fit-content;
+	width: 40px;
 	height: 70px;
 }
 table.iksweb th {
@@ -103,13 +108,13 @@ a:hover {
 }
 
 .tempbutton {
-    width:30%;
-    height:80px;
-    font-size: 200%;
-    margin-left: 35%;
+    width:50%;
+    height:100px;
+    font-size: clamp(30px, 4vw, 40px);
+    margin-left: 25%;
     display: inline-block;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 70px;
     outline: 2px solid #000;
     border-radius: 20px;
 }
@@ -118,20 +123,23 @@ a:hover {
     background-color: #A7D942;
     cursor: pointer;
     transition: 0.4s;
+    color: white;
 }
 
 .newstitle {
-    font-size: 400%;
+    font-size: clamp(24px, 8vw, 100px);
     margin-bottom: 10px;
 }
 
 .newstext {
-    font-size: 200%;
+    font-size: clamp(12px, 5vw, 50px);
 }
 
 .newstext, .newstitle {
     margin-left: 20px;
 }
+
+
 
 @media screen and (max-height: 700px) {
     .sidebarblock {width: 120px; height: 85px; font-size: large; }
@@ -141,6 +149,7 @@ a:hover {
     .tempbutton {
         width:70%;
         margin-left: 15%;
+        margin-top: 20px;
     }
     table.iksweb td,table.iksweb th {
         padding: 3px;
@@ -164,6 +173,7 @@ a:hover {
     .tempbutton {
         width:70%;
         margin-left: 15%;
+        margin-top: 10px;
     }
     table.iksweb td,table.iksweb th {
         padding: 3px;
