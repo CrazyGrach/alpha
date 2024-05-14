@@ -33,7 +33,7 @@ var countDownDate2 = new Date("Sep 1, 2024 00:00:00").getTime();
 
     // If the count down is over, write some text 
     if (distance2 < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("demo2").innerHTML = "Скоро.";
+        clearInterval(countdownfunction2);
+        document.getElementById("demo2").innerHTML = "1 сентября уже настало.";
     }
 }, 1000);
