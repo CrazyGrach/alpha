@@ -1,4 +1,4 @@
-var countDownDate2 = new Date("May 14, 2024 23:00:00").getTime();
+var countDownDate2 = new Date("Sep 1, 2024 00:00:00").getTime();
 
     var countdownfunction2 = setInterval(function() {
     
@@ -17,17 +17,17 @@ var countDownDate2 = new Date("May 14, 2024 23:00:00").getTime();
     // Output the result in an element with id="demo"
 
 
-    document.getElementById("demo2").innerHTML = days2 + ":" + hours2 + ":" + minutes2 + ":" + seconds2;
+    document.getElementById("demo2").innerHTML = 'До 1 сентября осталось ' + days2 + " дней, " + hours2 + " часов, " + minutes2 + " минут, " + seconds2 + ' секунд';
 
-    if (days2 < 7) {
-        document.getElementById("demo2").style.color = "darkgreen";
+    if (days2 < 90) {
+        document.getElementById("demo2").style.color = "green";
     }
 
-    if (days2 < 3) {
+    if (days2 < 60) {
         document.getElementById("demo2").style.color = "orange";
     }
     
-    if (days2 < 1) {
+    if (days2 < 30) {
         document.getElementById("demo2").style.color = "red";
     }
 
