@@ -36,4 +36,56 @@ var countDownDate2 = new Date("Sep 1, 2024 00:00:00").getTime();
         clearInterval(countdownfunction2);
         document.getElementById("demo2").innerHTML = "1 сентября уже настало.";
     }
+}, 1000); 
+
+var countDownDate = new Date("Sep 1, 2024 00:00:00").getTime();
+
+    var countdownfunction = setInterval(function() {
+    var month = new Date().getMonth()
+    //var month = 7             TEST
+    if (month == 5) {
+        var day_percent = new Date().getDate() * 1.08
+        var hour_percent = new Date().getHours() * 4.16 / 92
+        var min_percent = new Date().getMinutes() * 4.16 / 92 /60
+        var sec_percent = new Date().getSeconds() * 4.16 / 92 /60 /60
+        var percent = day_percent + hour_percent + min_percent + sec_percent // idk how it works xd
+        var res = percent.toFixed(4);
+    }
+    if (month == 6) {
+        var day_percent = (new Date().getDate() + 30) * 1.08
+        var hour_percent = new Date().getHours() * 4.16 / 92
+        var min_percent = new Date().getMinutes() * 4.16 / 92 /60
+        var sec_percent = new Date().getSeconds() * 4.16 / 92 /60 /60
+        var percent = day_percent + hour_percent + min_percent + sec_percent
+        var res = percent.toFixed(4);
+    }
+    if (month == 7) {
+        var day_percent = (new Date().getDate() + 61) * 1.08
+        //var day_percent = (31 + 61) * 1.08           TEST
+        var hour_percent = new Date().getHours() * 4.16 / 92
+        //var hour_percent = 23 * 4.16 / 92            TEST
+        var min_percent = new Date().getMinutes() * 4.16 / 92 /60
+        var sec_percent = new Date().getSeconds() * 4.16 / 92 /60 /60
+        var percent = day_percent + hour_percent + min_percent + sec_percent
+        var res = percent.toFixed(4);
+    }
+
+
+
+
+    document.getElementById("demo").innerHTML = 'Прошло ' + res + '% лета';
+
+    if (month == 5) {
+        document.getElementById("demo").style.color = "darkgreen";
+    }
+    if (month == 6) {
+        document.getElementById("demo").style.color = "orange";
+    }
+    if (month == 7) {
+        document.getElementById("demo").style.color = "red";
+    }
+    if (month > 7) {
+        clearInterval(countdownfunction2);
+        document.getElementById("demo").innerHTML = 'Прошло 100% лета';
+    }
 }, 1000);
