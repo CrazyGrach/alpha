@@ -1,0 +1,91 @@
+import random
+import time
+from setuptools.discovery import remove_stubs
+
+def pervaj():
+    n = input("Сколько х#ев в жопе? ")
+    if int(n) > 1:
+        print("Пидорас!")
+    elif int(n) == 1:
+        print("Немного пидорас!")
+    elif int(n) == 0:
+        print("Попизди мне")
+    return()
+def DAYN():
+    print('.......')
+    time.sleep(1)
+    print('даун')
+    time.sleep(2)
+    print("\033[1;32m Сам выберу! \n")
+    x = random.randint(1,6)
+    r = random.randint(1,6)
+    time.sleep(1)
+    print("\033[1;0m Готов? \n")
+    time.sleep(2)
+    print('твоё число:' + str(int(x)))
+    time.sleep(2)
+    print('число Chat GPT:' + str(int(r)))
+    time.sleep(1)
+    if int(x) == r:
+        print("\033[1;93m ты победил!!!!\n")
+    else:
+        print("\033[1;31m Ты проиграл(\n")
+    return()
+print('Выбери цифру(от 1 до 3):')
+try:
+    chto = int(input())
+    if chto == 1:
+        n = input("Сколько х#ев в жопе? ")
+        try:
+            if int(n) > 1:
+                print("Пидорас!")
+            elif int(n) == 1:
+                print("Немного пидорас!")
+            elif int(n) == 0:
+                print("Попизди мне")
+            elif int(n) < 0:
+                print("понял, понял")
+        except ValueError:
+            print("я физмат, я только циферки понимаю")
+            text= "a"
+            while True:
+                try:
+                    a = int(text)
+                    break
+                except ValueError:
+                    pervaj()
+    elif chto == 2:
+        print("Сколько отчимов?")
+        n = input()
+        if int(n) > 1:
+            print("Бедный(")
+        elif int(n) == 1:
+            print("Дефолт")
+        elif int(n) == 0:
+            print("Папа есть?")
+        else:
+            hui = len(str(n))
+            print(str(hui) + " ну бывает...")
+    elif chto == 3:
+        try:
+            print("Сыграем в азартную игру?)")
+            print('Введите число от 1 до 6')
+            n = input()
+            if int(n) > 6 or int(n) < 1:
+                DAYN()
+            else:
+                r = random.randint(1,6)
+                print('твоё число:'+ n)
+                time.sleep(2)
+                print('число Chat GPT:'+ str(int(r)))
+                time.sleep(1)
+                if int(n) == r:
+                    print("\033[1;93m ты победил!!!!\n")
+                else:
+                    print("\033[1;31m Ты проиграл(\n")
+        except ValueError:
+            DAYN()
+    else:
+        print('прочитай условие игры ещё раз, даун')
+except ValueError:
+    print('цифры, даун.....')
